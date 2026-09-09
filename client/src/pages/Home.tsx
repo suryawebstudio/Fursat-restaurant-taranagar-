@@ -1,12 +1,13 @@
 import { useMemo, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Clock3, Instagram, MapPin, Menu as MenuIcon, Phone, Play, Sparkles, Star, X } from "lucide-react";
 
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 const images = {
-  interior: "/gallery/interior-dining-room.jpg",
-  room: "/gallery/interior-counter.jpg",
-  tandoori: "/gallery/menu-tandoori-rice.jpg",
-  curries: "/gallery/menu-curries.jpg",
-  shakes: "/gallery/menu-shakes-waffle.jpg",
+  interior: asset("gallery/interior-dining-room.jpg"),
+  room: asset("gallery/interior-counter.jpg"),
+  tandoori: asset("gallery/menu-tandoori-rice.jpg"),
+  curries: asset("gallery/menu-curries.jpg"),
+  shakes: asset("gallery/menu-shakes-waffle.jpg"),
 };
 
 type MenuItem = { name: string; description: string; price: string };
